@@ -4,6 +4,7 @@ function TodoList(props) {
   const { todos } = props;
   return (
     <div className={styles.TodoListContainer}>
+      {todos.length === 0 && <h2>Todo list is empty</h2>}
       {todos.map((todo, index) => (
         <Todo key={index} todo={todo} />
       ))}
