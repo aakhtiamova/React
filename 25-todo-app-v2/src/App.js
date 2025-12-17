@@ -10,7 +10,7 @@ function App() {
   const addTodoHandler = (text) => {
     const newTodo = {
       text: text,
-      isComplited: false,
+      isCompleted: false,
       id: uuidv4(),
     };
     setTodos([...todos, newTodo]);
@@ -24,7 +24,7 @@ function App() {
     setTodos(
       todos.map((todo) =>
         todo.id === id
-          ? { ...todo, isComplited: !todo.isComplited }
+          ? { ...todo, isCompleted: !todo.isCompleted }
           : { ...todo }
       )
     );
