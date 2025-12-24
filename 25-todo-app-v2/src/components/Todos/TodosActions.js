@@ -1,13 +1,13 @@
 import { RiDeleteBack2Line, RiRefreshLine } from "react-icons/ri";
 import Button from "../UI/Button";
 
-function TodosActions() {
+function TodosActions({ resetTodos, deleteCompletedTodos }) {
   return (
     <>
-      <Button title="Reset Todos">
+      <Button title="Reset Todos" onClick={resetTodos}>
         <RiRefreshLine />
       </Button>
-      <Button title="Clear Completed Todos">
+      <Button title="Clear Completed Todos" onClick={deleteCompletedTodos}>
         <RiDeleteBack2Line />
       </Button>
     </>
